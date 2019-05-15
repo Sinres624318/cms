@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background: url("../img/bg.png") no-repeat center;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 30px;
+    padding: 30px 28px;
+    width: 364px;
+    height: 420px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    height: 100px;
+    width: 280px;
+    text-align: center;
+}
+
+.title > p {
+    position: relative;
+}
+
+.title > p::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    left: 0;
+    top: 50%;
+    position: absolute;
+}
+
+.title > p > span {
+    position: relative;
+    z-index: 9;
+    background: #fff;
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 30px;
+}
+
+.tip {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 16px;
+    margin: 0;
+    color: #8a8a8a;
+}
+
+.form {
+    width: 280px;
+}
+
+.form > .form-group:first-of-type {
+    margin-bottom: 30px;
+}
+.form >span {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.form >span:hover {
+    color: deepskyblue;
+}
+.btn-primary {
+    width: 100%;
+
+}
