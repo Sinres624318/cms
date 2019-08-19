@@ -52,9 +52,13 @@ Login.prototype = {
             },
             success: this.handleLoginSuccessCb.bind(this)
         });
-        console.log(username, password);
     },
     handleLoginSuccessCb(data) {
-        console.log(data);
+        if(data.state){
+            alert('登录成功');
+            location.href = 'http://localhost:3000/home.html';
+        }else {
+            alert('登录失败')
+        }
     }
 };

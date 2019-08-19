@@ -1,5 +1,7 @@
 var userModel = require('../model/user');
 var crypto = require('crypto');
+var utils = require('../utils/token');
+
 const reg = (req, res) => {
     let {username, password} = req.body;
     userModel.select({username}, (result) => {
@@ -23,13 +25,15 @@ const reg = (req, res) => {
 
 const login = (req, res) => {
     let {username, password} = req.body;
-    console.log(username, password);
     userModel.select({username}, (result) => {
         if (result) {
             const hash = crypto.createHash('sha256');
             hash.update(password);
-            console.log(result, result.password);
             if (result.password == hash.digest('hex')) {
+                // 创建token
+                const token = utils.createToken({user:username},'verification');
+                res.cookie('token',token);
+                res.cookie('user',username);
                 res.json({
                     state: true,
                     info: '登录成功'

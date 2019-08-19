@@ -53,9 +53,13 @@ Reg.prototype = {
             },
             success: this.handleRegSuccess.bind(this)
         });
-        console.log(username,password);
     },
-    handleRegSuccess(data){
-        console.log(data);
+    handleRegSuccess(data) {
+        if (data.state) {
+            alert('注册成功');
+            new Page().createContext(true);
+        } else {
+            alert('注册失败');
+        }
     }
 };

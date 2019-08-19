@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+.clearFix::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.navBar {
+    height: 50px;
+    min-width: 640px;
+    background: #428bca;
+    position: relative;
+    z-index: 999;
+}
+
+.logo {
+    float: left;
+}
+
+.logo > a {
+    display: inline-block;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.user {
+    float: right;
+    padding: 0 10px;
+    height: 50px;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    min-width: 100px;
+}
+
+.username {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+.logout {
+    position: absolute;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    left: 50%;
+    bottom: -35px;
+    transform: translateX(-50%);
+    color: #000;
+    display: none;
+    background: #fafafa;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+}
+
+.user:hover .logout {
+    display: block;
+}
+
+.content-wrap {
+    display: flex;
+    height: 100%;
+}
+
+.tabBar {
+    width: 190px;
+    min-width: 190px;
+    height: 100%;
+    border-right: 1px solid #f2f2f2;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    min-width: 450px;
+    overflow-y: auto;
+}
+
+.tab-list > li {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+
+.tab-list .focus {
+    background: #6fb3e0;
+}
+
+#main{
+    width: 700px;
+    height: 500px;
+    margin: 100px auto 0;
+}
+/*jobList start*/
+.jobList {
+    padding-left: 20px;
+}
+
+.jobItem {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 389px;
+    height: 200px;
+    margin: 16px 16px 0 0;
+    padding: 20px 18px 0;
+    border: 1px solid #EAEEED;
+    background-color: #fff;
+    transition: box-shadow .3s;
+}
+
+.jobItem:hover {
+    box-shadow: 0 0 10px 0 rgba(56, 81, 76, .12);
+}
+
+.jobItem-bottom {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px dashed #E0E0E0;
+}
+
+.position-name {
+    float: left;
+}
+
+.position-name-text {
+    max-width: 145px;
+    font-size: 16px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    vertical-align: middle;
+}
+
+.create-time {
+    color: #999;
+    font-size: 14px;
+}
+
+.salary {
+    float: right;
+    font-size: 16px;
+    color: #fa6041;
+}
+
+
+.jobItem-top-info > span {
+    height: 30px;
+    line-height: 30px;
+    color: #777;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jobItem-top-info .experience {
+    max-width: 265px;
+}
+
+.jobItem-top-info .edu {
+    max-width: 70px;
+}
+
+.jobItem-top-info .experience,
+.jobItem-top-info .edu,
+.position-name-text,
+.wordCut,
+.company_name,
+.industry {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.wordCut-operation {
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.wordCut-wrap {
+    overflow: hidden;
+    max-width: 260px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+
+.operation {
+    float: right;
+    width: 90px;
+    height: 30px;
+}
+
+.operation > button {
+    border-radius: 4px;
+    padding: 0 7px
+}
+
+.delete {
+    float: left;
+}
+
+.modify {
+    float: right;
+}
+
+.wordCut {
+    display: inline-block;
+    width: 80px;
+    height: 26px;
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #999;
+    border: 1px solid #F0F0F0;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.copyright-logo {
+    width: 40px;
+    height: 40px;
+    float: left;
+    display: inline-block;
+}
+
+.copyright-logo > img {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-right {
+    margin-left: 54px;
+}
+
+.industry > span {
+    line-height: 20px;
+    color: #999;
+}
+
+.industry > span:before {
+    content: ' / ';
+}
+
+.industry > span:first-of-type:before {
+    content: '';
+}
+
+.modal-content {
+    width: 730px;
+}
+.modal-fo {
+    text-align: right;
+    padding: 0 10px 10px;
+}
+/*jobList end*/
+
+
+/*jobPublish start*/
+.publishJob-wrap {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.publishJob {
+    width: 700px;
+    padding: 10px;
+}
+
+.form-group-title {
+    font-weight: 700;
+    color: #666;
+}
+
+.publishJob label {
+    color: #999;
+    font-weight: 400;
+}
+
+.publishJob textarea {
+    resize: none;
+    height: 150px;
+    width: 400px;
+    display: block;
+}
+
+.form-group-left {
+    float: left;
+}
+
+.form-group-right {
+    float: right;
+}
+
+.publishJob > .form > .btn-primary {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+/*jobPublish end*/

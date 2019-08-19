@@ -8,9 +8,9 @@ Page.prototype = {
     },
     createContext(judge) {
         if (!judge) {
-            this.reg = new Reg(this.container);
-        } else {
             this.login = new Login(this.container);
+        } else {
+            this.reg = new Reg(this.container);
         }
     }
 };
